@@ -64,16 +64,16 @@
 		DB72E4CF24BCA2D300E0A470 /* SwiftUIAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				DB72E4E824BCA4C500E0A470 /* LongTeaTime.mp3 */,
+				DB72E4DE24BCA2D800E0A470 /* Info.plist */,
 				DB72E4D024BCA2D300E0A470 /* AppDelegate.swift */,
-				DB72E4D224BCA2D300E0A470 /* SceneDelegate.swift */,
+				DB72E4E424BCA32C00E0A470 /* AppState.swift */,
 				DB72E4D424BCA2D300E0A470 /* ContentView.swift */,
+				DB72E4E624BCA39700E0A470 /* Player.swift */,
+				DB72E4D224BCA2D300E0A470 /* SceneDelegate.swift */,
 				DB72E4D624BCA2D800E0A470 /* Assets.xcassets */,
 				DB72E4DB24BCA2D800E0A470 /* LaunchScreen.storyboard */,
-				DB72E4DE24BCA2D800E0A470 /* Info.plist */,
-				DB72E4E824BCA4C500E0A470 /* LongTeaTime.mp3 */,
 				DB72E4D824BCA2D800E0A470 /* Preview Content */,
-				DB72E4E424BCA32C00E0A470 /* AppState.swift */,
-				DB72E4E624BCA39700E0A470 /* Player.swift */,
 			);
 			path = SwiftUIAVPlayer;
 			sourceTree = "<group>";
