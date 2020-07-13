@@ -28,7 +28,7 @@ final class Player: NSObject, ObservableObject {
     /// The observed time, which may not be needed by the UI.
     @Published var observedTime: TimeInterval = 0
 
-    @Published var duration: TimeInterval = 0
+    @Published var itemDuration: TimeInterval = 0
     fileprivate var itemDurationKVOPublisher: AnyCancellable!
 
     /// Publish timeControlStatus
@@ -44,7 +44,6 @@ final class Player: NSObject, ObservableObject {
     var scrubState: PlayerScrubState = .reset {
         didSet {
             switch scrubState {
-
             case .reset:
                 return
             case .scrubStarted:
@@ -85,7 +84,6 @@ final class Player: NSObject, ObservableObject {
             self.observedTime = time.seconds
 
             switch self.scrubState {
-
             case .reset:
                 self.displayTime = time.seconds
             case .scrubStarted:
@@ -125,7 +123,7 @@ final class Player: NSObject, ObservableObject {
             .sink(receiveValue: { [weak self] (newStatus) in
                 guard let newStatus = newStatus,
                     let self = self else { return }
-                self.duration = newStatus.seconds
+                self.itemDuration = newStatus.seconds
                 }
         )
     }

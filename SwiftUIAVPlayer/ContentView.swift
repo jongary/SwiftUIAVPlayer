@@ -29,7 +29,16 @@ struct ContentView: View {
                 }
             }) {
                 Image(systemName: self.player.timeControlStatus == .paused ? "play" : "pause")
+                    .imageScale(.large)
+                    .frame(width: 64, height: 64)
             }
+
+            HStack {
+                Text("Observed time")
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 8))
+                Text(self.durationFormatter.string(from: self.player.observedTime) ?? "")
+            }
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 12, trailing: 0))
 
             HStack {
                 Text("Display time")
@@ -40,10 +49,14 @@ struct ContentView: View {
             /// This is a bit of a hack, but it takes a moment for the AVPlayerItem to load
             /// the duration, so we need to avoid adding the slider until the range
             /// (0...self.player.duration) is not empty.
-            if self.player.duration > 0 {
-                Slider(value: self.$player.displayTime, in: (0...self.player.duration), onEditingChanged: {
+            if self.player.itemDuration > 0 {
+                Slider(value: self.$player.displayTime, in: (0...self.player.itemDuration), onEditingChanged: {
                     (scrubStarted) in
-                    self.player.scrubState = scrubStarted ? .scrubStarted : .scrubEnded(self.player.displayTime)
+                    if scrubStarted {
+                        self.player.scrubState = .scrubStarted
+                    } else {
+                        self.player.scrubState = .scrubEnded(self.player.displayTime)
+                    }
                 })
             } else {
                 Text("Slider will appear here when the player is ready")

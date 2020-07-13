@@ -30,6 +30,7 @@
 		DB72E4E424BCA32C00E0A470 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DB72E4E624BCA39700E0A470 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DB72E4E824BCA4C500E0A470 /* LongTeaTime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LongTeaTime.mp3; sourceTree = "<group>"; };
+		DB72E4EA24BCBB3D00E0A470 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		DB72E4C424BCA2D300E0A470 = {
 			isa = PBXGroup;
 			children = (
+				DB72E4EA24BCBB3D00E0A470 /* README.md */,
 				DB72E4CF24BCA2D300E0A470 /* SwiftUIAVPlayer */,
 				DB72E4CE24BCA2D300E0A470 /* Products */,
 			);
