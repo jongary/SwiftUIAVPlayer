@@ -66,6 +66,7 @@ final class Player: NSObject, ObservableObject {
     deinit {
         removePeriodicTimeObserver()
         timeControlStatusKVOPublisher.cancel()
+        itemDurationKVOPublisher.cancel()
     }
 
     func play() {
