@@ -77,6 +77,6 @@ In `Player`
 ```
 
 The attached project illustrates this approach. I really like SwiftUI
-and Combine look forward to rewiring my brain to use them effectively.
+and Combine and look forward to rewiring my brain to use them effectively.
 
 PS: The embedded audio file was my first GarageBand creation from 15 years ago!
